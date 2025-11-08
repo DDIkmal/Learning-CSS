@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Media Query</title>
+
+    <style>
+      .mobile {
+        height: 200px;
+        width: 200px;
+        background-color: red;
+        color: white;
+      }
+
+      .tablet {
+        height: 200px;
+        width: 200px;
+        background-color: green;
+        color: white;
+      }
+
+      .dekstop {
+        height: 200px;
+        width: 200px;
+        background-color: blue;
+        color: white;
+      }
+
+      @media (min-width: 320px) and (max-width: 767px) {
+        .tablet,
+        .dekstop {
+          display: none;
+        }
+      }
+
+      @media (min-width: 768px) and (max-width: 1024px) {
+        .mobile,
+        .dekstop {
+          display: none;
+        }
+      }
+
+      @media (min-width: 1025px) {
+        .mobile,
+        .tablet {
+          display: none;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="mobile">Mobile Screen</div>
+
+    <div class="tablet">Tablet Screen</div>
+
+    <div class="dekstop">Dekstop Screen</div>
+  </body>
+</html>
