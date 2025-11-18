@@ -1,0 +1,56 @@
+.container{
+    display: flex;;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+    height: 100vh;
+}
+
+.basic{
+
+    border-radius: 10px;
+    height: 300px;
+    width: 300px;
+    background-color: lightgray;
+
+}
+
+p {
+    font-size: 40px;
+    font-weight: bold;
+    text-align: center;
+}
+
+h3 {
+    text-align: center;
+}
+
+li{
+    font-size: 16px;
+    margin-left: 45px;
+}
+
+button {
+    display: block;
+    margin: 10px auto;
+    padding: 10px 20px;
+    font-size: 14p ;
+    cursor: pointer;
+    background-color: orange;
+    border-radius: 10px;
+    border: none;
+    color: white;
+}
+
+
+
+@media (min-width: 320px) and (max-width: 768px) {
+        .container {
+            flex-direction: column;
+            height: auto;
+            gap: 50px;
+        }
+
+        
+    
+    }
