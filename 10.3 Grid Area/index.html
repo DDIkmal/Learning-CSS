@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Grid Area</title>
+
+    <style>
+      body {
+        display: grid;
+        grid-template-columns: repeat(8, 1fr);
+        grid-template-areas:
+          "header header header header header header header header"
+          "body body body body body body body body"
+          "footer footer footer footer footer footer footer footer";
+        height: 100vh;
+        margin: 0;
+        padding: 0;
+      }
+
+      header {
+        grid-area: header;
+        background-color: red;
+        height: 10vh;
+      }
+
+      .body-container {
+        height: 80vh;
+        grid-area: body;
+        background-color: gold;
+        display: grid;
+        grid-template-columns: repeat(8, 1fr);
+        grid-template-areas: "menu content content content content content content widget";
+      }
+
+      .menu {
+        grid-area: menu;
+        background-color: blueviolet;
+      }
+
+      .content {
+        grid-area: content;
+        background-color: mediumorchid;
+      }
+
+      .widget {
+        grid-area: widget;
+        background-color: brown;
+      }
+
+      footer {
+        height: 10vh;
+        grid-area: footer;
+        background-color: peru;
+      }
+
+      @media (min-width: 320px) and (max-width: 768px) {
+        body {
+          grid-template-columns: 1fr;
+          grid-template-areas:
+            "header"
+            "content"
+            "widget"
+            "footer";
+        }
+
+        .menu {
+          display: none;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header>header</header>
+    <div class="body-container">
+      <div class="menu">menu</div>
+      <div class="content">content</div>
+      <div class="widget">widget</div>
+    </div>
+    <footer>footer</footer>
+  </body>
+</html>

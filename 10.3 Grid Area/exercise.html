@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Exercise</title>
+    <style>
+      body {
+        display: grid;
+        grid-template-columns: repeat(8, 1fr);
+        grid-template-areas:
+          "menu menu header header header header header header"
+          "menu menu content content content content content widget"
+          "menu menu footer footer footer footer footer footer";
+        min-height: 100vh;
+      }
+
+      header {
+        grid-area: header;
+        background-color: red;
+      }
+
+      .menu {
+        grid-area: menu;
+        background-color: blueviolet;
+      }
+
+      .content {
+        grid-area: content;
+        background-color: mediumorchid;
+      }
+
+      .widget {
+        grid-area: widget;
+        background-color: brown;
+      }
+
+      footer {
+        grid-area: footer;
+        background-color: peru;
+      }
+    </style>
+  </head>
+  <body>
+    <header>header</header>
+    <div class="menu">menu</div>
+    <div class="content">content</div>
+    <div class="widget">widget</div>
+    <footer>footer</footer>
+  </body>
+</html>
