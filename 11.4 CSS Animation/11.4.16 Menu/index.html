@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>X Animation</title>
+
+    <style>
+      body {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+        margin: 0;
+        background-color: #f4f4f4;
+      }
+
+      .container {
+        width: 50px;
+        height: 30px;
+        cursor: pointer;
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column;
+        gap: 5px;
+        position: relative;
+      }
+
+      .container > div {
+        height: 5px;
+        width: 100%;
+        background-color: black;
+        border-radius: 5px;
+        transition: all 0.5s ease;
+        position: absolute;
+      }
+
+      .top {
+        top: 0;
+        transform-origin: center;
+      }
+
+      .center {
+        top: 12.5px; /* Tempatkan tepat di tengah */
+        opacity: 1;
+        transition: opacity 0.3s ease;
+      }
+
+      .bottom {
+        bottom: 0;
+        transform-origin: center;
+      }
+
+      /* Animasi saat hover */
+      .container:hover .top {
+        transform: rotate(45deg);
+        top: 12.5px; /* Pindahkan ke tengah */
+      }
+
+      .container:hover .bottom {
+        transform: rotate(-45deg);
+        bottom: auto;
+        top: 12.5px; /* Pindahkan ke tengah */
+      }
+
+      .container:hover .center {
+        opacity: 0; /* Sembunyikan */
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="container">
+      <div class="top"></div>
+      <div class="center"></div>
+      <div class="bottom"></div>
+    </div>
+  </body>
+</html>
